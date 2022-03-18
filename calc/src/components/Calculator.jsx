@@ -8,6 +8,11 @@ function Calculator() {
     let numTarget = target.innerHTML
     setNumber(numTarget)
   }
+  const createOperator = (operator) => {
+    setNumber(operator)
+  }
+
+ 
 
   return (
     <div className={s.main__container}>
@@ -45,7 +50,7 @@ function Calculator() {
           </div>
         </div>
       </div>
-      <Operators />
+      <Operators create={createOperator}/>
     </div>
   )
 }
